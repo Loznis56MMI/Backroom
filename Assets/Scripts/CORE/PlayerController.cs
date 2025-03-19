@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {   
 	//Vitesse en marchant et en courant
     [SerializeField] private float walk, run;
+	[SerializeField] private GameObject torchlight;
 
 	//Sensibilité de la souris
 	private float sensitivity = 500;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         cc = GetComponent<CharacterController>();
 		audio_steps = GetComponent<AudioSource>();
         cc.enabled = true;
+		torchlight.SetActive(false);
 		
 		//Rend le curseur invisible
         //Cursor.lockState = CursorLockMode.Locked;
@@ -98,5 +100,9 @@ public class PlayerController : MonoBehaviour
 
 	public void setCanMove(bool val){
 		canMove = val;
+	}
+
+	public void useTorchlight(bool val){
+		torchlight.SetActive(val);
 	}
 }
