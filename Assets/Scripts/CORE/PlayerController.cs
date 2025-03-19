@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isMoving = false;
 	private bool isRunning = false;
+	private bool canMove = true;
 	
 	private CharacterController cc;
 
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-		if(!HudManager.pause){
+		if(!HudManager.pause && canMove){
 			//Camera limitation variables
 			/*
 			const float MIN_Y = -60.0f;
@@ -90,6 +91,12 @@ public class PlayerController : MonoBehaviour
 			} else {
 				step_timer = 0.1f;
 			}
+		} else {
+			cc.SimpleMove(Vector3.zero);
 		}
     }
+
+	public void setCanMove(bool val){
+		canMove = val;
+	}
 }
