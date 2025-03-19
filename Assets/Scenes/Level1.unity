@@ -11688,13 +11688,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176354898493980435, guid: 72ca31d60996e28418a8f3eac317fc4d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4724145171794306249, guid: 72ca31d60996e28418a8f3eac317fc4d, type: 3}
-      insertIndex: 2
+      insertIndex: 0
+      addedObject: {fileID: 963848897}
+    - targetCorrespondingSourceObject: {fileID: 4724145171794306249, guid: 72ca31d60996e28418a8f3eac317fc4d, type: 3}
+      insertIndex: 3
       addedObject: {fileID: 1829454120}
     - targetCorrespondingSourceObject: {fileID: 4724145171794306249, guid: 72ca31d60996e28418a8f3eac317fc4d, type: 3}
       insertIndex: -1
@@ -27310,7 +27313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -27343,16 +27346,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963848894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 328405902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 460.5996, y: 219}
-  m_SizeDelta: {x: 921.2, y: 438}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &964861236
 PrefabInstance:
@@ -69719,4 +69722,3 @@ SceneRoots:
   - {fileID: 826176488}
   - {fileID: 1783148292339241572}
   - {fileID: 435079787}
-  - {fileID: 963848897}

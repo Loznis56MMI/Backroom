@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class digicode : MonoBehaviour
 {
@@ -48,6 +49,8 @@ public class digicode : MonoBehaviour
             cntChiffre++;
             code += val.ToString();
             texteDigicode.GetComponent<TMP_Text>().SetText(code);
+            AudioManager am = AudioManager.instance;
+				am.PlaySFX(am.sfx_list.sfx_bouton);
         }
     }
 
@@ -55,12 +58,18 @@ public class digicode : MonoBehaviour
         cntChiffre = 0;
         code = "";
         texteDigicode.GetComponent<TMP_Text>().SetText(code);
+        AudioManager am = AudioManager.instance;
+				am.PlaySFX(am.sfx_list.sfx_bouton);
     }
 
     public void EnterCode(){
+        AudioManager am = AudioManager.instance;
+				am.PlaySFX(am.sfx_list.sfx_bouton);
         if(code == goodCode){
             //Ajouter l'écran win
             Debug.Log("WIN");
+            SceneManager.LoadScene("Win");
+
         } else {
             ResetCode();
         }
