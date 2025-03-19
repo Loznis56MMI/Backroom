@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject panel_options;
+	public GameObject Tutorielpanel; // Assigne le panel dans l'inspecteur Unity
 	
 	void Start(){
 		UnshowOptions();
+		UnshowTutoriel();
 	}
 	
 	public void PlayGame(){
@@ -23,6 +25,13 @@ public class MainMenu : MonoBehaviour
 		panel_options.SetActive(false);
 	}
 	
+	public void ShowTutoriel(){
+		Tutorielpanel.SetActive(true);
+	}
+	
+	public void UnshowTutoriel(){
+		Tutorielpanel.SetActive(false);
+	}
 	public void QuitGame(){
 		Application.Quit();
 	}

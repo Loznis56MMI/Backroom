@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class digicode : MonoBehaviour
 {
@@ -67,6 +68,8 @@ public class digicode : MonoBehaviour
         if(code == goodCode){
             //Ajouter l'écran win
             Debug.Log("WIN");
+            SceneManager.LoadScene("Win");
+
         } else {
             ResetCode();
         }
