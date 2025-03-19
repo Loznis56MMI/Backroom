@@ -44,7 +44,7 @@ public class digicode : MonoBehaviour
     }
 
     public void PressButton(int val){
-        if(cntChiffre < 4){
+        if(cntChiffre < 3){
             cntChiffre++;
             code += val.ToString();
             texteDigicode.GetComponent<TMP_Text>().SetText(code);
