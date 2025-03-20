@@ -25,6 +25,8 @@ public class digicode : MonoBehaviour
     {
         if(isInArea){
             if(Input.GetKeyDown(KeyCode.E)){
+                Debug.Log("E");
+
                 isCanvasActive = !isCanvasActive;
                 canvasDigicode.SetActive(isCanvasActive);
                 SetCanMovePlayer(!isCanvasActive);
@@ -34,12 +36,15 @@ public class digicode : MonoBehaviour
 
     void OnTriggerEnter(Collider col){
         if(col.gameObject.tag == "Player"){
+            Debug.Log("In Area");
             isInArea = true;
         }
     }
 
     void OnTriggerExit(Collider col){
         if(col.gameObject.tag == "Player"){
+            Debug.Log("Out Area");
+
             isInArea = false;
         }
     }
