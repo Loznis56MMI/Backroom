@@ -7,14 +7,23 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject panel_options;
 	public GameObject Tutorielpanel; // Assigne le panel dans l'inspecteur Unity
-	
+	public GameObject RGPDpanel; // Assigne le panel dans l'inspecteur Unity
+
 	void Start(){
 		UnshowOptions();
 		UnshowTutoriel();
+		UnshowRGPD();
 	}
 	
 	public void PlayGame(){
 		SceneManager.LoadScene("Level1");
+	}
+	public void ShowRGPD(){
+		RGPDpanel.SetActive(true);
+	}
+	
+	public void UnshowRGPD(){
+		RGPDpanel.SetActive(false);
 	}
 	
 	public void ShowOptions(){
