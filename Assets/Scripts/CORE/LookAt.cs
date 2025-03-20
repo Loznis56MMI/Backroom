@@ -6,7 +6,7 @@ public class LookAt : MonoBehaviour
 {
 	private Transform player;
 	private Vector3 lastPlayerPosition;
-	private float rotationSpeed = 5f; // Ajustable
+	private float rotationSpeed = 8f; // Ajustable
 		
 	void Start(){
 		player = GameObject.FindWithTag("Player").transform;

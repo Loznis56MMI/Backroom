@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-	private Transform player;
-	public float speed = 0.1f;
-	
-	private float stop_distance = 3f;
-	
-    // Start is called before the first frame update
+    private Transform player;
+    public float speed = 0.5f;
+    private float stop_distance = 5f;
+    public float floorHeight = 0.5f; // Hauteur minimale (ajuste selon ton terrain)
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-      //Si la distance entre le joueur et l'ennemi est inférieur à stop_distance et qu'on n'est pas en pause
-      if(Vector3.Distance(player.transform.position, transform.position) < stop_distance && !HudManager.pause){
-        Vector3 playerPosition = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, playerPosition, speed * Time.deltaTime);
-      }
+        if(Vector3.Distance(player.transform.position, transform.position) < stop_distance && !HudManager.pause)
+        {
+            // Fixe la hauteur Y à la valeur du sol
+            Vector3 targetPosition = new Vector3(player.transform.position.x, floorHeight, player.transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        }
     }
 }

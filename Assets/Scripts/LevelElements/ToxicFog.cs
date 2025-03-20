@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ToxicFog : MonoBehaviour
-{
+{	public int Degat=10;
 	private bool playerContact = false;
 	private HudManager hud;
 	private float cooldown = 0.1f;
@@ -17,7 +17,7 @@ public class ToxicFog : MonoBehaviour
 		if(playerContact){
 			//On enlève 1 PV au joueur toutes les 0.1s
 			if(timerCooldown <= 0){
-				hud.subPV(1);
+				hud.subPV(Degat);
 				timerCooldown = cooldown;
 			} else {
 				timerCooldown -= Time.deltaTime;
