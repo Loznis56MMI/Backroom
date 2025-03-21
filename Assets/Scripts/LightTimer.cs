@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightTimer : MonoBehaviour
 {
-    private float timer = 5f;
+    private float timer = 1.5f;
     private bool soundPlayed = false;
     // Start is called before the first frame update
 
