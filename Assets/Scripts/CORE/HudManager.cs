@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class HudManager : MonoBehaviour
-{
+{	public HealthManager Barredevie;
 	public static HudManager instance = null;
 	
 	private int pv_max = 100;
@@ -96,12 +96,14 @@ public class HudManager : MonoBehaviour
 	//Pour enlever des PV
 	public void subPV(int val){
 		pv = Mathf.Max(0, pv - val);
+		Barredevie.TakeDamage(val);
 		updatePV();
 	}
 	
 	//Pour modifier le nombre de PV sur l'HUD
 	public void updatePV(){
 		hud_pv.GetComponent<TMP_Text>().SetText("PV : " + pv.ToString());
+
 	}
 	
 	//Pour savoir si on a un item
