@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     private Transform player;
-    public float speed = 0.5f;
+    public float speed = 1.5f;
     private float stop_distance = 5f;
     public float floorHeight = 0.5f; // Hauteur minimale (ajuste selon ton terrain)
 
